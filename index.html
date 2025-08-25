@@ -715,166 +715,104 @@ NexGen Vendors offers smart vending machines on flexible rental
           </div>
           <div class="scroll-revealed portfolio-grid row">
   <div class="portfolio col-12 sm:col-6 lg:col-4 flex">
-    <article class="flex flex-col justify-between w-full h-full bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
-      <!-- Image & Title -->
-      <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
-        <!-- Image -->
-        <div class="w-full md:w-1/3 h-48 rounded-lg overflow-hidden">
-          <img
-            src="./assets/img/machines/complete_vend_2__2_-removebg-preview.png"
-            alt="C1 Pro Lite"
-            class="w-full h-full object-cover"
-          />
-        </div>
-
-        <!-- Title & Description -->
-        <div class="flex-1 flex flex-col justify-center items-center space-y-2 text-center">
-          <center>
-            <h4 class="text-2xl font-bold text-gray-900 dark:text-white" style="color: #3d63dd;">C1 Pro Lite</h4><br>
-            <h6 class="text-2xl font-bold text-gray-900 dark:text-white">10" Inch Smart Combo Vending Machine</h6>
-          </center>
-          <br>
-          <p class="mb-2">
-            Compact smart vending with a 10.1" touch display, refrigeration, and multi-mode payment options.
-          </p>
-        </div>
-      </div>
-
-      <!-- Mini Detail Cards Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- You can place mini-cards here -->
-      </div>
-
-      <!-- More Details Toggle Button -->
-      <div class="mt-auto text-center pt-4">
-        <button
-          onclick="this.closest('article').querySelector('.more-details').classList.toggle('hidden')"
-          class="px-5 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition"
-        >
-          More Details
-        </button>
-      </div>
-
-      <!-- Collapsible Section -->
-      <div class="more-details hidden mt-6 bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
-        <h3 class="text-base font-semibold mb-2">Additional Information</h3>
-        <p class="mb-2">
-          This machine includes advanced software updates, cloud telemetry, and analytics support. Perfect for offices, malls, and public places. Comes with a 1-year warranty and installation support.
-        </p>
-        <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
-          <li>IoT-enabled remote monitoring</li>
-          <li>24/7 support with optional AMC</li>
-          <li>Installation available across major cities</li>
-        </ul>
-
-        <!-- Feature -->
-        <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
-          <h4 style="color: #3d63dd;" class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">Feature</h4>
-          <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
-            <li>Refrigeration</li>
-            <li>Bill acceptor</li>
-            <li>Coin changer</li>
-            <li>Better shopping experience</li>
-            <li>Android system with idle ad display</li>
-          </ul>
-        </div>
-
-        <!-- Capacity -->
-        <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
-          <h4 style="color: #3d63dd;" class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">Capacity</h4>
-          <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
-            <li>Slots Quantity: 60 Slots</li>
-            <li>Type: Conveyor</li>
-            <li>Capacity: 300–400 pcs (beverages)</li>
-            <li>Suitable for: Snacks, Beverages, Combo</li>
-          </ul>
-        </div>
-
-        <!-- Specification -->
-        <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
-          <h4 style="color: #3d63dd;" class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">Specification</h4>
-          <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
-            <li>Voltage: AC100V–240V / 50–60Hz</li>
-            <li>Screen: 10.1" Touch Screen</li>
-            <li>Power: 427W (Refrigerated), 29W (Normal)</li>
-            <li>Weight: 225kg</li>
-            <li>Temperature: 4°C–25°C</li>
-            <li>Dimensions: H 1940mm × W 882mm × D 290mm</li>
-            <li>Payment: Bill, Coin, UPI, Cashless</li>
-            <li>Optional: Face-scan, AI QR, Membership card/IC card</li>
-          </ul>
-        </div>
-      </div>
-    </article>
-  
-            </div>
-
-            <div class="portfolio col-12 sm:col-6 lg:col-4 flex">
+    
   <article class="flex flex-col justify-between w-full h-full bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
   <!-- Image & Title -->
   <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
     <!-- Image -->
-    <div class="w-full md:w-1/3 h-48 rounded-lg overflow-hidden">
+    <div class="w-full md:w-1/3 h-48 rounded-lg overflow-hidden flex flex-col items-center">
       <img
+        id="productImage1"
         src="./assets/img/machines/complete_vend_2__2_-removebg-preview.png"
         alt="C1 Pro Lite"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover transition duration-300"
       />
+
+      <!-- Color Selector -->
+      <div class="flex gap-3 mt-3">
+        <!-- White -->
+        <button 
+          onclick="changeColor('white','productImage1')" 
+          class="w-10 h-10 rounded-full border border-gray-800 bg-white cursor-pointer hover:ring-2 hover:ring-gray-500"
+          title="White">
+        </button>
+
+        <!-- Green -->
+        <button 
+          onclick="changeColor('green','productImage1')" 
+          class="w-10 h-10 rounded-full border border-gray-400 bg-green-400 cursor-pointer hover:ring-2 hover:ring-green-500"
+          title="Green">
+        </button>
+      </div>
     </div>
 
     <!-- Title & Description -->
-<div class="flex-1 flex flex-col justify-center items-center space-y-2 text-center">
+    <div class="flex-1 flex flex-col justify-center items-center space-y-2 text-center">
       <center>
-        <h4 class="text-2xl font-bold text-gray-900 dark:text-white" style="color: #3d63dd;">
-        S1 Pro Lite 
-      </h4><br>
-      <h6 class="text-2xl font-bold text-gray-900 dark:text-white">
-        10" Inch Smart Combo Vending Machine
-      </h6>
+        <h4 class="text-2xl font-bold text-gray-900 dark:text-white" style="color: #3d63dd;">C1 Pro Lite</h4><br>
+        <h6 class="text-2xl font-bold text-gray-900 dark:text-white">10" Inch Smart Combo Vending Machine</h6>
       </center>
-      <!-- <h4 class="text-2xl font-bold text-gray-900 dark:text-white">
-        C1 Pro Lite – 10" Smart Combo Vending Machine
-      </h4> --><br>
+      <br>
       <p class="mb-2">
         Compact smart vending with a 10.1" touch display, refrigeration, and multi-mode payment options.
       </p>
-      
     </div>
   </div>
 
-  <!-- Divider -->
-  <!-- <div class="border-t my-6"></div> -->
-
   <!-- Mini Detail Cards Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    
-    <!-- Feature Card -->
-    <!-- <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 border shadow-sm">
-      <h4 class="text-xs font-semibold text-gray-500 dark:text-gray-300 mb-2 uppercase tracking-wide text-center">Feature</h4>
-      <ul class="list-disc list-inside text-center text-sm text-gray-800 dark:text-gray-200 space-y-1">
+    <!-- You can place mini-cards here -->
+  </div>
+
+  <!-- More Details Toggle Button -->
+  <div class="mt-auto text-center pt-4">
+    <button
+      onclick="this.closest('article').querySelector('.more-details').classList.toggle('hidden')"
+      class="px-5 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition"
+    >
+      More Details
+    </button>
+  </div>
+
+  <!-- Collapsible Section -->
+  <div class="more-details hidden mt-6 bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+    <h3 class="text-base font-semibold mb-2">Additional Information</h3>
+    <p class="mb-2">
+      This machine includes advanced software updates, cloud telemetry, and analytics support. Perfect for offices, malls, and public places. Comes with a 1-year warranty and installation support.
+    </p>
+    <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
+      <li>IoT-enabled remote monitoring</li>
+      <li>24/7 support with optional AMC</li>
+      <li>Installation available across major cities</li>
+    </ul>
+
+    <!-- Feature -->
+    <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
+      <h4 style="color: #3d63dd;" class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">Feature</h4>
+      <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
         <li>Refrigeration</li>
         <li>Bill acceptor</li>
         <li>Coin changer</li>
         <li>Better shopping experience</li>
         <li>Android system with idle ad display</li>
       </ul>
-    </div> -->
+    </div>
 
-    <!-- Capacity Card -->
-    <!-- <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 border shadow-sm">
-      <h4 class="text-xs font-semibold text-gray-500 dark:text-gray-300 mb-2 uppercase tracking-wide text-center">Capacity</h4>
-      <ul class="list-disc list-inside text-center text-sm text-gray-800 dark:text-gray-200 space-y-1">
+    <!-- Capacity -->
+    <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
+      <h4 style="color: #3d63dd;" class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">Capacity</h4>
+      <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
         <li>Slots Quantity: 60 Slots</li>
         <li>Type: Conveyor</li>
         <li>Capacity: 300–400 pcs (beverages)</li>
         <li>Suitable for: Snacks, Beverages, Combo</li>
       </ul>
-    </div> -->
+    </div>
 
-    <!-- Specification Card -->
-    <!-- <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 border shadow-sm">
-      <h4 class="text-xs font-semibold text-gray-500 dark:text-gray-300 mb-2 uppercase tracking-wide text-center">Specification</h4>
-      <ul class="list-disc list-inside text-center text-sm text-gray-800 dark:text-gray-200 space-y-1">
+    <!-- Specification -->
+    <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
+      <h4 style="color: #3d63dd;" class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">Specification</h4>
+      <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
         <li>Voltage: AC100V–240V / 50–60Hz</li>
         <li>Screen: 10.1" Touch Screen</li>
         <li>Power: 427W (Refrigerated), 29W (Normal)</li>
@@ -884,13 +822,79 @@ NexGen Vendors offers smart vending machines on flexible rental
         <li>Payment: Bill, Coin, UPI, Cashless</li>
         <li>Optional: Face-scan, AI QR, Membership card/IC card</li>
       </ul>
-    </div> -->
+    </div>
+  </div>
+</article>
+
+<script>
+  function changeColor(color, imageId) {
+    const productImage = document.getElementById(imageId);
+
+    if (color === "green") {
+      productImage.src = "./assets/img/machines/nxcb350 yellow(green) .png"; // replace with your green machine image
+    } else if (color === "white") {
+      productImage.src = "./assets/img/machines/complete_vend_2__2_-removebg-preview.png"; // replace with your white machine image
+    }
+  }
+</script>
+
+
+
+            </div>
+
+            <div class="portfolio col-12 sm:col-6 lg:col-4 flex">
+  <article class="flex flex-col justify-between w-full h-full bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+  <!-- Image & Title -->
+  <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+    <!-- Image -->
+    <div class="w-full md:w-1/3 h-48 rounded-lg overflow-hidden flex flex-col items-center">
+      <img
+        id="productImage2"
+        src="./assets/img/machines/complete_vend_2__2_-removebg-preview.png"
+        alt="S1 Pro Lite"
+        class="w-full h-full object-cover"
+      />
+      <!-- Color Selector -->
+      <div class="flex gap-2 mt-2">
+        <!-- White -->
+        <button 
+          onclick="changeColor('white','productImage2')" 
+          class="w-10 h-10 rounded-full border border-gray-400 bg-white cursor-pointer hover:ring-2 hover:ring-gray-500"
+          title="White">
+        </button>
+
+        <!-- Dark Green -->
+        <button 
+          onclick="changeColor('green','productImage2')" 
+          class="w-10 h-10 rounded-full border border-gray-400 bg-green-400 cursor-pointer hover:ring-2 hover:ring-green-700"
+          title="Dark Green">
+        </button>
+      </div>
+    </div>
+  
+    <!-- Title & Description -->
+    <div class="flex-1 flex flex-col justify-center items-center space-y-2 text-center">
+      <center>
+        <h4 class="text-2xl font-bold text-gray-900 dark:text-white" style="color: #3d63dd;">
+          S1 Pro Lite
+        </h4><br>
+        <h6 class="text-2xl font-bold text-gray-900 dark:text-white">
+          10" Inch Smart Combo Vending Machine
+        </h6>
+      </center>
+      <br>
+      <p class="mb-2">
+        Compact smart vending with a 10.1" touch display, refrigeration, and multi-mode payment options.
+      </p>
+
+    
+    </div>
   </div>
 
   <!-- More Details Toggle Button -->
-    <div class="mt-auto text-center pt-4">
+  <div class="mt-auto text-center pt-4">
     <button
-    onclick="this.closest('article').querySelector('.more-details').classList.toggle('hidden')"
+      onclick="this.closest('article').querySelector('.more-details').classList.toggle('hidden')"
       class="px-5 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition"
     >
       More Details
@@ -898,75 +902,74 @@ NexGen Vendors offers smart vending machines on flexible rental
   </div>
 
   <!-- Collapsible Section -->
-  <div class="more-details hidden mt-6 bg-gray-100 dark:bg-gray-700 p-4 rounded-lg "> 
-     <h3 class="text-base font-semibold mb-2">Additional Information</h3>
+  <div class="more-details hidden mt-6 bg-gray-100 dark:bg-gray-700 p-4 rounded-lg"> 
+    <h3 class="text-base font-semibold mb-2">Additional Information</h3>
     <p class="mb-2 text-center">
       This machine includes advanced software updates, cloud telemetry, and analytics support. Perfect for offices, malls, and public places. Comes with a 1-year warranty and installation support.
     </p>
-  <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
+    <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
       <li>IoT-enabled remote monitoring</li>
       <li>24/7 support with optional AMC</li>
       <li>Installation available across major cities</li>
     </ul>
     
-       <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
-      <h4 style="color: #3d63dd;"class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">
+    <!-- Feature -->
+    <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
+      <h4 style="color: #3d63dd;" class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">
         Feature
       </h4>
-  <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
+      <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
         <li>Refrigeration</li>
         <li>Bill acceptor</li>
         <li>Coin changer</li>
         <li>Provides better shopping experience</li>
         <li>Android system with idle advertising display</li>
-      
-
-
       </ul>
     </div>
 
     <!-- Capacity -->
     <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
-      <h4 style="color: #3d63dd;"class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">
+      <h4 style="color: #3d63dd;" class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">
         Capacity
       </h4>
-  <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
+      <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
         <li>Slots Quantity: 60 Slots</li>
         <li>Type: Spiral</li>
-        <li>Capacity : All beverages 300 to 400 pcs
-</li>
-        <li>Suitable for : Beverages, Snacks, combo</li>
+        <li>Capacity: 300–400 pcs (all beverages)</li>
+        <li>Suitable for: Beverages, Snacks, Combo</li>
       </ul>
     </div>
 
-
     <!-- Specification -->
     <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
-      <h4 style="color: #3d63dd;"class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">
+      <h4 style="color: #3d63dd;" class="text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase tracking-wide sm:w-1/3">
         Specification
       </h4>
-  <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
+      <ul class="list-[style-type:circle] list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1 sm:w-2/3">
         <li>Voltage: AC100V–240V / 50–60Hz</li>
-        <li>Screen : 21.5" Touch Screen
-</li>
-        <li>Power : Refrigerated 442W Normal 44W</li>
-        <li>Weight : 300kg</li>
+        <li>Screen: 21.5" Touch Screen</li>
+        <li>Power: 442W (Refrigerated), 44W (Normal)</li>
+        <li>Weight: 300kg</li>
         <li>Temperature: 4°C–25°C</li>
-        <li>Dimensions: H 1940mm × W 1269mmmm × D 795mm</li>
+        <li>Dimensions: H 1940mm × W 1269mm × D 795mm</li>
         <li>Payment Methods: Bill, Coin, Cashless payment, UPI</li>
-        <li>Optional : All face-scan pay, AI QR pay. QR Code
-          Membership card/IC card payment function
-        </li>
-        
-
-
-
-
-
+        <li>Optional: Face-scan pay, AI QR pay, Membership card/IC card</li>
       </ul>
     </div>
   </div> 
 </article>
+
+<script>
+  function changeColor(color, imageId) {
+    const img = document.getElementById(imageId);
+    if (color === 'white') {
+      img.src = "./assets/img/machines/complete_vend_2__2_-removebg-preview.png";
+    } else if (color === 'green') {
+      img.src = "./assets/img/machines/nx cb 350 (green) (1).png"; // <-- add your green version here
+    }
+  }
+</script>
+
 
             </div>
 
